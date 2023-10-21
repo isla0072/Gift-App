@@ -18,12 +18,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     right: 30,
     bottom: 30,
-    backgroundColor: "#03A9F4",
+    backgroundColor: "#0587FF",
     borderRadius: 28,
     elevation: 8,
   },
   title: {
     fontSize: 24,
-    color: "white",
+    color: "#FFFFFF",
   },
 });

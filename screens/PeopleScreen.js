@@ -103,7 +103,7 @@ function PeopleScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.message}>A people list</Text>
+      <Text style={styles.message}>A PEOPLE LIST</Text>
       {!sortedPeople.length && (
         <Text style={styles.head}>No people saved yet</Text>
       )}
@@ -122,10 +122,11 @@ function PeopleScreen() {
                 <Text style={styles.head}>
                   {item.name} - {formattedDate}
                 </Text>
-                <View style={{ flexDirection: "row", alignItems: "center" }}>
+                <View style={styles.iconContainer}>
                   <Icon
-                    name="arrow-right"
-                    size={20}
+                    name="lightbulb-o"
+                    size={30}
+                    color="#0587FF"
                     onPress={() => navigateToIdeaScreen(item.id)}
                   />
                 </View>
@@ -140,35 +141,47 @@ function PeopleScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 5,
-  },
-  head: {
-    fontSize: 16,
-    paddingHorizontal: 15,
+    padding: 15,
+    backgroundColor: "#F9F9F9",
   },
   message: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginHorizontal: 25,
-    marginTop: 40,
+    fontSize: 26,
+    fontWeight: "700",
+    margin: 25,
+    color: "#333333",
   },
   item: {
     flexDirection: "row",
     alignItems: "center",
-    padding: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: "#ccc",
     justifyContent: "space-between",
-    width: "100%",
+    padding: 16,
+    marginVertical: 8,
+    borderRadius: 12,
+    backgroundColor: "#FFFFFF",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+  },
+  head: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#333333",
+  },
+  iconContainer: {
+    flexDirection: "row",
+    alignItems: "center",
   },
   rightAction: {
     backgroundColor: "#dd2c00",
     justifyContent: "center",
     alignItems: "flex-end",
     flex: 1,
+    borderRadius: 12,
+    marginRight: 8,
   },
   actionText: {
-    color: "#fff",
+    color: "#FFFFFF",
     fontWeight: "600",
     padding: 10,
   },

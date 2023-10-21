@@ -75,17 +75,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: "#f9f9f9",
+    backgroundColor: "#FFFFFF",
   },
   title: {
     fontSize: 24,
     fontWeight: "bold",
     marginBottom: 20,
-    color: "#333",
+    color: "#333333",
   },
   emptyText: {
     fontStyle: "italic",
-    color: "#aaa",
+    color: "#9F9F9F",
   },
   listItem: {
     flexDirection: "row",
@@ -93,9 +93,9 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 16,
     borderBottomWidth: 1,
-    borderBottomColor: "#ccc",
+    borderBottomColor: "#EAEAEA",
     alignItems: "center",
-    backgroundColor: "#fff",
+    backgroundColor: "#FFFFFF",
     marginBottom: 8,
     borderRadius: 8,
     elevation: 2,
@@ -109,16 +109,16 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 12,
     fontSize: 16,
-    color: "#333",
+    color: "#333333",
   },
   deleteButton: {
-    backgroundColor: "#e57373",
+    backgroundColor: "#0587FF",
     paddingVertical: 8,
     paddingHorizontal: 16,
     borderRadius: 4,
   },
   deleteButtonText: {
-    color: "#fff",
+    color: "#FFFFFF",
     fontWeight: "bold",
   },
 });

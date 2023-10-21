@@ -30,8 +30,6 @@ function AddIdeaScreen({ route }) {
   const [isCameraReady, setIsCameraReady] = useState(false);
   const [previewVisible, setPreviewVisible] = useState(false);
   const [capturedImage, setCapturedImage] = useState(null);
-  const [flashMode, setFlashMode] = useState("off");
-  const [cameraType, setCameraType] = useState(Camera.Constants.Type.back);
 
   const handleTakePicture = async () => {
     if (cameraRef.current && isCameraReady) {
@@ -85,14 +83,16 @@ function AddIdeaScreen({ route }) {
       </KeyboardAvoidingView>
 
       <KeyboardAvoidingView behavior="padding" style={styles.cameraContainer}>
-        {previewVisible && capturedImage ? (
+        {hasPermission === null ? (
+          <Text>Waiting for permission</Text>
+        ) : hasPermission === false ? (
+          <Text>No access to camera</Text>
+        ) : previewVisible && capturedImage ? (
           <CameraPreview photo={capturedImage} />
         ) : (
           <Camera
             ref={cameraRef}
             style={{ width: imageWidth, height: imageHeight }}
-            type={cameraType}
-            flashMode={flashMode}
             onCameraReady={() => setIsCameraReady(true)}
           >
             <View
@@ -172,30 +172,33 @@ const CameraPreview = ({ photo }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
-    alignItems: "center",
+    padding: 16,
+    backgroundColor: "#f9f9f9",
   },
   inputContainer: {
     width: "100%",
+    marginBottom: 20,
   },
   cameraContainer: {
     width: "100%",
     alignItems: "center",
     justifyContent: "center",
+    marginBottom: 20,
   },
   buttonContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
     width: "100%",
-    paddingHorizontal: 10,
-    paddingTop: 10,
+    paddingHorizontal: 16,
   },
   input: {
     width: "100%",
-    padding: 10,
+    padding: 12,
     borderWidth: 1,
     borderColor: "#ccc",
-    marginVertical: 10,
+    borderRadius: 8,
+    backgroundColor: "#fff",
+    elevation: 2,
   },
   previewContainer: {
     justifyContent: "center",

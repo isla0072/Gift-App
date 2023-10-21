@@ -49,13 +49,13 @@ function AddPersonScreen() {
         style={{ marginVertical: 15 }}
         onSelectedChange={setDob}
         options={{
-          backgroundColor: "lightgrey",
-          textHeaderColor: "black",
-          textDefaultColor: "black",
-          selectedTextColor: "black",
-          mainColor: "teal",
-          textSecondaryColor: "darkblue",
-          borderColor: "darkblue",
+          backgroundColor: "#FFFFFF",
+          textHeaderColor: "#333333",
+          textDefaultColor: "#333333",
+          selectedTextColor: "#0587FF",
+          mainColor: "#0587FF",
+          textSecondaryColor: "#9F9F9F",
+          borderColor: "#EAEAEA",
         }}
         current={new Date().toISOString().split("T")[0]}
         mode="calendar"
@@ -73,7 +73,9 @@ function AddPersonScreen() {
           onRequestClose={() => setShowErrorModal(false)}
         >
           <View style={styles.modalView}>
-            <Text>Error: Both name and date of birth must be provided.</Text>
+            <Text style={styles.modalText}>
+              Error: Both name and date of birth must be provided.
+            </Text>
             <Button title="Close" onPress={() => setShowErrorModal(false)} />
           </View>
         </Modal>
@@ -85,22 +87,44 @@ function AddPersonScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 15,
+    backgroundColor: "#F9F9F9",
     justifyContent: "center",
     alignItems: "center",
-    padding: 20,
   },
   input: {
     width: "100%",
-    padding: 10,
+    padding: 16,
     borderWidth: 1,
     borderColor: "#ccc",
-    marginVertical: 10,
+    borderRadius: 12,
+    marginVertical: 8,
+    backgroundColor: "#FFFFFF",
+    fontSize: 16,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
   },
   modalView: {
-    flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "rgba(0,0,0,0.5)",
+    backgroundColor: "white",
+    padding: 20,
+    borderRadius: 12,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    width: "80%",
+    alignSelf: "center",
+    marginVertical: 20,
+  },
+  modalText: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#333333",
+    marginBottom: 15,
   },
 });
 
