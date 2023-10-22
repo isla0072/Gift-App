@@ -52,7 +52,7 @@ function AddPersonScreen() {
           backgroundColor: "#FFFFFF",
           textHeaderColor: "#333333",
           textDefaultColor: "#333333",
-          selectedTextColor: "#0587FF",
+          selectedTextColor: "#FFFFFF",
           mainColor: "#0587FF",
           textSecondaryColor: "#9F9F9F",
           borderColor: "#EAEAEA",
