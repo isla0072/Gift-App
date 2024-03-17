@@ -26,7 +26,7 @@ The app maintains a structured data format for people and their associated gift 
 - Context API for global state management.
   
 ## Credits
-Developed as a mideterm project for the Multi-Platform Mobile App Development course.
+Developed as a midterm project for the Multi-Platform Mobile App Development course.
 
 ## Getting Started
 Clone the repository and navigate to the project directory. Ensure you have React Native set up in your development environment.
