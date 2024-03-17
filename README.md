@@ -32,7 +32,7 @@ Developed as a midterm project for the Multi-Platform Mobile App Development cou
 Clone the repository and navigate to the project directory. Ensure you have React Native set up in your development environment.
 
 ```bash
-git clone <https://github.com/isla0072/Gift-App>
+git clone https://github.com/isla0072/Gift-App
 cd gift-app
 npm install
 npx react-native run-android # or run-ios
